@@ -13,11 +13,11 @@ This is version 1 (as of 5/19/2021) of an ongoing project, and is my first large
 Note: An API key is necesssary to pull new financial data from Quandl/Sharadar.
 
 ## Instructions for use:
-1. If you want to get updated pricing and daily change %, go to main.py on line 13 and check if mspf.get_price_and_changes() is commented out. Then on line 19, check if mspf.merge_files() is commented. Keep these uncommented to run the price scraping program. Run main.py and a csv file titled 'tracker.csv' will be available.
+1. To get updated pricing and daily change %, go to main.py on line 13 and check if mspf.get_price_and_changes() is commented out. Then on line 19, check if mspf.merge_files() is commented. Keep these uncommented to run the price scraping program. Run main.py and a csv file titled 'tracker.csv' will be available.
 
-2. If you want to get updated 52-week high and low, business summary, seekingalpha and whalewisdom links, then go to main.py on line 16 and check if mspf.get_other_data() is commented out. Keep this uncommented to run the data scraping program. This takes longer than the price scraping program, a few minutes.
+2. To get updated 52-week high and low, business summary, seekingalpha and whalewisdom links, then go to main.py on line 16 and check if mspf.get_other_data() is commented out. Keep this uncommented to run the data scraping program. This takes longer than the price scraping program, a few minutes.
 
-3. If you want both the updated pricing data and 'other' data, keep all 3 functions uncommented (mspf.get_price_and_changes() - line 13, mspf.get_other_data() - line 16, and mspf.merge_files() - line 19), then run main.py.
+3. To get both the updated pricing data and 'other' data, keep all 3 functions uncommented (mspf.get_price_and_changes() - line 13, mspf.get_other_data() - line 16, and mspf.merge_files() - line 19), then run main.py.
 
 3. To get updated insider purchases, run the file openinsider_data.py separately (run this file first if you want to get this data along with pricing and other data). This will scrape openinsider.com and create a separate csv file. After this finishes, go back to main.py and comment out mspf.get_price_and_changes() and mspf.get_other_data() (unless you want to get updated data for these, too).
 
