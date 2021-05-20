@@ -1,6 +1,6 @@
 # stock_data_aggregator
 
-This is version 1 (as of 5/19/2021) of an ongoing project, and is my first large (for me) project for my personal use and for use in my portfolio.
+This is version 1 (as of 5/19/2021) of an ongoing project, and is my first large (for me) project for my personal use and for use in my portfolio while communicating with potential employers.
 
 -	Joins data from multiple sources to output a CSV file that can be used as a screener
 -	Fundamental financials from Quandl/Sharadar (via paid subscription) by using their API to download the zip folders and using the os, zipfile, and pandas modules to create a pandas dataframe
