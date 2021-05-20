@@ -34,17 +34,20 @@ def openinsider_scrape(tickers):
     url_list = list()
 
     for ticker in tickers:
-        url_loop = url_test.format(ticker)
-        html_test = requests.get(url_loop, headers=header).content
-        df_list_test = pd.read_html(html_test)
-        table = df_list_test[-3]
+        try:
+            url_loop = url_test.format(ticker)
+            html_test = requests.get(url_loop, headers=header).content
+            df_list_test = pd.read_html(html_test)
+            table = df_list_test[-3]
 
-        # test to see if the table with trades exists by checking the type and comparing against expected value
-        page_type = str(type(df_list_test[-3].columns))
-        correct_type = "<class 'pandas.core.indexes.base.Index'>"
-        if page_type == correct_type:
-            url_list.append(table)
-        # print("still working!")
+            # test to see if the table with trades exists by checking the type and comparing against expected value
+            page_type = str(type(df_list_test[-3].columns))
+            correct_type = "<class 'pandas.core.indexes.base.Index'>"
+            if page_type == correct_type:
+                url_list.append(table)
+            # print("still working!")
+        except:
+            pass
     return url_list
 
 # multithreading scraping data from openinsider.com. takes about 3 minutes
