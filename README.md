@@ -10,7 +10,7 @@ This is version 1 (as of 5/19/2021) of an ongoing project, and is my first large
 -	Scrapes and cleans ticker price and supplementary data from 4 other sites using requests, Selenium Webdriver, and BeautifulSoup for the tickers not available on Yahoo Finance
 -	Uses multithreading via the concurrent.futures module to scrape 60-120 pages at a time depending on CPU usage
 
-Note: A Quandl/Sharadar API key is necesssary to pull new data.
+Note: An API key is necesssary to pull new financial data from Quandl/Sharadar.
 
 ## Instructions for use:
 1. If you want to get updated pricing and daily change %, go to main.py on line 13 and check if mspf.get_price_and_changes() is commented out. Then on line 19, check if mspf.merge_files() is commented. Keep these uncommented to run the price scraping program. Run main.py and a csv file titled 'tracker.csv' will be available.
